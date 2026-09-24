@@ -1,22 +1,120 @@
 .container {
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 400px;
-  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 40px auto;
   text-align: center;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  border: 2px solid transparent;
 }
 
 .light {
   background-color: #ffffff;
   color: #000000;
+  border-color: #000000;
 }
 
 .dark {
   background-color: #242629;
   color: #ffffff;
+  border-color: #ffffff;
 }
 
-button {
-  margin: 10px;
+.container h2 {
+  margin-bottom: 20px;
+  font-size: 1.75rem;
+}
+
+.container input {
+  padding: 10px 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 60%;
+  margin-right: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.container input:focus {
+  border-color: #023160;
+}
+
+/* Base button styles */
+.container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+/* Light mode: dark blue button — ALWAYS */
+.light button {
+  background-color: #023160 !important;
+  color: #ffffff !important;
+}
+
+.light button:hover {
+  background-color: #023160 !important;
+}
+
+/* Dark mode: green button — ALWAYS */
+.dark button {
+  background-color: #033a23 !important;
+  color: #ffffff !important;
+}
+
+.dark button:hover {
+  background-color: #033a23 !important;
+}
+
+/* Disabled — override browser default. Still theme color, just not clickable */
+.container button:disabled {
+  cursor: not-allowed;
+}
+
+.light button:disabled {
+  background-color: #023160 !important;
+  color: #ffffff !important;
+}
+
+.dark button:disabled {
+  background-color: #033a23 !important;
+  color: #ffffff !important;
+}
+
+/* Task list */
+.container ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  background-color: rgba(30, 144, 255, 0.1);
+}
+
+.container li button {
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #dc3545 !important;
+  color: white !important;
+  border-radius: 4px;
+  margin: 0;
+  opacity: 1;
+  font-weight: 400;
+}
+
+.container li button:hover {
+  background-color: #b02a37 !important;
+  opacity: 1;
 }
