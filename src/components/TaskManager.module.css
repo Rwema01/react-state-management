@@ -37,7 +37,7 @@
 }
 
 .container input:focus {
-  border-color: #023160;
+  border-color: #1E90FF;
 }
 
 /* Base button styles */
@@ -51,39 +51,30 @@
   transition: background-color 0.3s;
 }
 
-/* Light mode: dark blue button — ALWAYS */
+/* Light mode button — README palette: #1E90FF */
 .light button {
-  background-color: #023160 !important;
+  background-color: #1E90FF !important;
   color: #ffffff !important;
 }
 
-.light button:hover {
+.light button:hover:not(:disabled) {
   background-color: #023160 !important;
 }
 
-/* Dark mode: green button — ALWAYS */
+/* Dark mode button — README palette: #85D1B0 */
 .dark button {
+  background-color: #85D1B0 !important;
+  color: #1a1a1a !important;
+}
+
+.dark button:hover:not(:disabled) {
   background-color: #033a23 !important;
   color: #ffffff !important;
 }
 
-.dark button:hover {
-  background-color: #033a23 !important;
-}
-
-/* Disabled — override browser default. Still theme color, just not clickable */
+/* Disabled — same colors, just not clickable */
 .container button:disabled {
   cursor: not-allowed;
-}
-
-.light button:disabled {
-  background-color: #023160 !important;
-  color: #ffffff !important;
-}
-
-.dark button:disabled {
-  background-color: #033a23 !important;
-  color: #ffffff !important;
 }
 
 /* Task list */
